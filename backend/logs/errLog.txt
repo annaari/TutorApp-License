@@ -1,0 +1,16 @@
+20230225	16:10:02	0898895f-3b58-4520-889f-b0ed90e8f8a5	Error: not allowed by CORS
+20230225	17:09:02	4b881de2-d080-4b4c-9cd7-6102d9925dc7	Error: ENOENT: no such file or directory, stat 'D:\Egyetem\LICENSE\learning node\backend\views\subdir\test.html'
+20230225	17:10:02	5749f2cc-3723-409a-bfc5-25d2d640a434	Error: ENOENT: no such file or directory, stat 'D:\Egyetem\LICENSE\learning node\backend\views\subdir\test.html'
+20230225	17:11:04	f4e389ab-2d88-42ef-b771-f5c616fc9582	Error: ENOENT: no such file or directory, stat 'D:\Egyetem\LICENSE\learning node\backend\views\subdir\index.html'
+20230225	17:12:19	8a647232-e618-472b-8ed6-7453958f6e33	Error: ENOENT: no such file or directory, stat 'D:\Egyetem\LICENSE\learning node\backend\views\subdir\index.html'
+20230225	17:12:27	8281aee0-293b-4f9f-8da4-33ae6577ac3a	Error: ENOENT: no such file or directory, stat 'D:\Egyetem\LICENSE\learning node\backend\views\subdir\test.html'
+20230227	19:12:24	d66aed28-3583-4570-aca7-4e9b545a43cf	TypeError: Cannot set properties of undefined (setting 'employees')
+20230227	19:13:28	760ec0fb-b4a5-4efc-9010-5f104e27621e	TypeError: Cannot set properties of undefined (setting 'employees')
+20230227	19:16:04	cffb6184-7df7-4ced-baca-ef8cbf34b7ff	ReferenceError: s is not defined
+20230227	19:16:12	c33e6b5c-c154-4ca2-ad6b-90e5b399bf25	ReferenceError: s is not defined
+20230304	16:17:02	a0f4064d-477f-4ae9-8f2f-80dd4ccbee50	SyntaxError: Unexpected token a in JSON at position 18
+20230311	14:43:51	0ca8a62c-34f9-4f2a-a81d-50428c1bc30b	Error: ENOENT: no such file or directory, stat 'D:\Egyetem\LICENSE\Project\TutorApp-License\backend\views\index.html'
+20230311	14:44:29	423e3f29-b812-4504-a1c7-70ab203cba6a	Error: ENOENT: no such file or directory, stat 'D:\Egyetem\LICENSE\Project\TutorApp-License\backend\views\index.html'
+20230311	14:45:12	e7fc6802-e34c-4d65-a14e-4b5e3575167b	Error: ENOENT: no such file or directory, stat 'D:\Egyetem\LICENSE\Project\TutorApp-License\backend\views\index.html'
+20230311	14:47:22	f3261279-d888-4f40-b885-0dde4e9aa908	Error: ENOENT: no such file or directory, stat 'D:\Egyetem\LICENSE\Project\TutorApp-License\backend\views\index.html'
+20230311	15:24:58	c26dc5e6-30e0-4532-aa2a-463b528f32b9	SyntaxError: Unexpected token c in JSON at position 13
