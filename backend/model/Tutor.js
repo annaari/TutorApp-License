@@ -2,6 +2,10 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 const userSchema = new Schema({
+    userId: {
+        type: String,
+        required: true
+    },
     email: {
         type: String,
         required: true
@@ -23,7 +27,7 @@ const userSchema = new Schema({
         profilePicture: Object,
         studiedAt: {
             type: Array,
-            default: []
+           required: true
         }
     },
     courseInformation: [

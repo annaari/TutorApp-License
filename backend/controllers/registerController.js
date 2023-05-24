@@ -11,9 +11,11 @@ const handleNewUser = async (req, res) => {
     // check for duplicate
     const duplicate = await User.findOne({email: email}).exec();
 
+    console.log(role, ROLES_LIST.Student, ROLES_LIST.Tutor)
+
     if(duplicate) return res.sendStatus(400);
     if(pwd !== pwdConfirm) return res.status(400).json({'message': 'The passwords are not identical.'});
-    if(ROLES_LIST.Student !== role && ROLES_LIST.Tutor !== role) return res.status(400).json({'message': 'Invalid role.'});
+    if(ROLES_LIST.Student !== parseInt(role) && ROLES_LIST.Tutor !== parseInt(role)) return res.status(400).json({'message': 'Invalid role.'});
 
     try {
         // encrypt the pwd
@@ -42,9 +44,41 @@ const getUserById = async (req, res) => {
     }
     res.json(user);
 }
-
+// {id}
 const createTutor = async (req, res) => {
+    const id = req.params.id
     const information = req.body;
+    if(!id || !information) return res.status(400).json({'message': 'Id and information are required.'});
+
+    const user = await User.findOne({ _id: id }).exec();
+    if (!user) {
+        return res.status(204).json({ 'message': `User ID ${id} not found` });
+    }
+
+    if(!information.generalInformation.studiedAt.length) {
+        return res.status(400).json({ 'message': `StudiedAt is required` });
+    }
+
+    const result = await Tutor.create({
+        "userId": user._id,
+        "email": user.email,
+        "generalInformation": {
+            "firstname": information.generalInformation.firstname,
+            "lastname": information.generalInformation.lastname,
+            "phoneNumber": information.generalInformation.phoneNumber,
+            "birthDate": information.generalInformation.birthDate,
+            "profilePicture": {},
+            "studiedAt": information.generalInformation.studiedAt
+        },
+        "courseInformation": information.courseInformation,
+        "available": information.available,
+        "preferedLocation": information.preferedLocation,
+        "preferedPlatform": information.preferedPlatform
+    });
+
+    console.log(result);
+        res.status(201).json({'success': result._id});
+
 }
 
 // const setUserRole = async (req, res) => {
